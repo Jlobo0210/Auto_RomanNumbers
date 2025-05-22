@@ -139,16 +139,26 @@ class RomanNumber:
             self.estado_actual = False
             
 if __name__== "__main__":
-    i=input("Ingresa un numero romano del I al L\n")
+    mensaje=lambda valido: "Numero valido" if valido else "Numero invalido"
+    while True:
+        try:
+            i=input("Ingresa un numero romano del I al L\n")
+            if i == 'exit':
+                break
+            numeroRomano=RomanNumber(i)
+            print(f"{i:7} → {mensaje(numeroRomano.evaluar())}")
+        except Exception as e:
+            print(f"Error: {e}")
+
+
     """romanos = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X',
             'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX',
             'XXI', 'XXII', 'XXIII', 'XXIV', 'XXV', 'XXVI', 'XXVII', 'XXVIII', 'XXIX', 'XXX',
             'XXXI', 'XXXII', 'XXXIII', 'XXXIV', 'XXXV', 'XXXVI', 'XXXVII', 'XXXVIII', 'XXXIX', 'XL',
             'XLI', 'XLII', 'XLIII', 'XLIV', 'XLV', 'XLVI', 'XLVII', 'XLVIII', 'XLIX', 'L']
-    for i in romanos:"""
-    numeroRomano=RomanNumber(i)
-    mensaje=lambda valido: "Numero valido" if valido else "Numero invalido"
-    print(f"{i:7} → {mensaje(numeroRomano.evaluar())}")
+    for i in romanos:
+        numeroRomano=RomanNumber(i)
+        print(f"{i:7} → {mensaje(numeroRomano.evaluar())}")"""
     
 
     
