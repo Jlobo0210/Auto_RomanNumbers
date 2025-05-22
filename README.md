@@ -1,3 +1,4 @@
-AUTOMATA DE NUMEROS ROMANOS
+AUTOMATON OF ROMAN NUMBERS AND FLOATING NUMBERS
 
-Identificar si una cadena de texto de un número romano del 1 al 50 es válido de forma autómata.
+- Identify whether a text string of a Roman number from 1 to 50 is valid as an automaton.
+- Identify if a text string of a number is valid as a 'float' in an automaton way.
